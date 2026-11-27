@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap");
+
+.df-tool {
+  --df-canvas: #f8f7f4;
+  --df-surface: #ffffff;
+  --df-text: #202a35;
+  --df-muted: #495866;
+  --df-action: #1454a0;
+  --df-border: #526775;
+  --df-error: #a32b22;
+  box-sizing: border-box;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--df-text);
+  background: var(--df-canvas);
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.df-tool *,
+.df-tool *::before,
+.df-tool *::after {
+  box-sizing: border-box;
+}
+
+.df-tool h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  max-width: 22em;
+}
+
+.df-lead,
+.df-note,
+.df-tool li,
+.df-tool p {
+  max-width: 65ch;
+}
+
+.df-lead {
+  margin: 0 0 1.5rem;
+}
+
+.df-section {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  background: var(--df-surface);
+}
+
+.df-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.df-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 1rem;
+}
+
+.df-field > label,
+.df-tool legend {
+  font-weight: 600;
+}
+
+.df-tool fieldset {
+  border: 1px solid var(--df-border);
+  margin: 0 0 1.5rem;
+  padding: 0.5rem 1rem 1rem;
+  min-inline-size: 0;
+}
+
+.df-tool legend {
+  display: table;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0 0.35rem;
+  background: var(--df-surface);
+}
+
+.df-hint,
+.df-note,
+.df-source {
+  color: var(--df-muted);
+  font-size: 1rem;
+}
+
+.df-tool input,
+.df-tool select {
+  min-height: 3rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--df-border);
+  border-radius: 0;
+  background: var(--df-surface);
+  color: var(--df-text);
+  font: inherit;
+  max-width: 24rem;
+}
+
+.df-tool input:focus-visible,
+.df-tool select:focus-visible,
+.df-tool button:focus-visible,
+.df-tool a:focus-visible,
+.df-tool summary:focus-visible {
+  outline: 3px solid var(--df-action);
+  outline-offset: 2px;
+}
+
+.df-choice {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin: 0 0 0.75rem;
+  font-weight: 400;
+}
+
+.df-choice input {
+  min-height: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+.df-button {
+  min-height: 3rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  background: var(--df-action);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.df-button-secondary {
+  background: transparent;
+  color: var(--df-action);
+  text-decoration: underline;
+}
+
+.df-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.df-error {
+  color: var(--df-error);
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
+}
+
+.df-answer {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  background: var(--df-surface);
+}
+
+.df-answer p:first-of-type {
+  font-size: 1.25rem;
+}
+
+.df-table-wrap {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.df-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.df-table th,
+.df-table td {
+  padding: 0.5rem 0.35rem;
+  border-bottom: 1px solid var(--df-border);
+  text-align: right;
+  vertical-align: bottom;
+  overflow-wrap: anywhere;
+}
+
+.df-table caption {
+  caption-side: bottom;
+  padding-top: 0.5rem;
+  text-align: left;
+  color: var(--df-muted);
+  font-size: 1rem;
+}
+
+.df-table th[scope="row"],
+.df-table thead th:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.df-table thead th {
+  font-weight: 700;
+}
+
+.df-status {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+}
+
+.df-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.df-tool a {
+  color: var(--df-action);
+}
+
+.df-tool details {
+  margin-top: 1rem;
+}
+
+.df-tool summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 40rem) {
+  .df-tool {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .df-tool h1 {
+    font-size: 1.75rem;
+  }
+
+  .df-table {
+    font-size: 1rem;
+  }
+}
